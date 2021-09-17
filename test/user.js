@@ -12,7 +12,7 @@ chai.use(chaiHttp)
 
 const user = {
   credentials: {
-    username: 'foo',
+    username: 'foo@bar.baz',
     password: '12345',
     password_confirmation: '12345'
   }
@@ -20,14 +20,14 @@ const user = {
 
 const updatedUser = {
   credentials: {
-    username: 'foo',
+    username: 'foo@bar.baz',
     password: '54321'
   }
 }
 
 const nonMatchingPasswordsUser = {
   credentials: {
-    username: 'dont',
+    username: 'dont@type.good',
     password: '12345',
     password_confirmation: '54321'
   }
@@ -58,7 +58,7 @@ describe('Users', () => {
   })
 
   describe('POST /sign-up', () => {
-    it('should reject users with duplicate usernames', done => {
+    it('should reject users with duplicate username', done => {
       chai.request(server)
         .post('/sign-up')
         .send(user)
