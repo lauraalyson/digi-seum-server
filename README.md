@@ -14,7 +14,7 @@ Create your own digital masterpiece. Login and create a piece of art, tell us ab
 4. Run `node server.js` to begin server.
 5. Examine endpoints and other api documentation below.
 
-## [API Documentation](./../ApiDocumentation.md)
+## [API Documentation](https://github.com/lauraalyson/digi-seum-server/blob/main/ApiDocumentation.md)
 
 # Planning
 
